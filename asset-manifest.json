@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/path-visualizer/static/css/main.74dadd74.css",
-    "main.js": "/path-visualizer/static/js/main.efda24ab.js",
+    "main.js": "/path-visualizer/static/js/main.cd573861.js",
     "index.html": "/path-visualizer/index.html",
     "main.74dadd74.css.map": "/path-visualizer/static/css/main.74dadd74.css.map",
-    "main.efda24ab.js.map": "/path-visualizer/static/js/main.efda24ab.js.map"
+    "main.cd573861.js.map": "/path-visualizer/static/js/main.cd573861.js.map"
   },
   "entrypoints": [
     "static/css/main.74dadd74.css",
-    "static/js/main.efda24ab.js"
+    "static/js/main.cd573861.js"
   ]
 }
