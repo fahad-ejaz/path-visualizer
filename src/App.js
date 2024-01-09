@@ -29,7 +29,7 @@ function App() {
   // if (width <= 600) {
   //   nGrids = 2;
   // }
-  console.log(width)
+
   if (width <= 1400) {
     nGrids = 1;
     // setStart(1);
