@@ -55,12 +55,12 @@ const initialWallsSm = [14, 8, 20, 26, 32, 38, 44, 45, 46, 2];
     // if(width <= 1400){
       setReset(true)
       if(width > 800){
-        setWalls(initialWallsLg)
+        setWalls([...initialWallsLg])
         setEnd(206)
         setStart(200)
       }
       if(width <= 800){
-        setWalls(initialWallsSm)
+        setWalls([...initialWallsSm])
         setEnd(15)
         setStart(50)
       }
