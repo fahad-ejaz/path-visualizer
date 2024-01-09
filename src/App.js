@@ -11,6 +11,15 @@ import './App.css'
 
 function App() {
 
+
+  
+const initialWallsLg = [155, 179, 203, 227, 251, 275, 276, 277, 278, 279, 280, 281, 282, 
+                        283, 259, 233, 235, 234, 231, 229, 205,132, 133, 134, 135, 136, 137, 138, 
+                        139, 232, 131, 163, 186, 207, 183, 187, 182, 181, 184, 299, 298, 297];
+
+
+const initialWallsSm = [14, 8, 20, 26, 32, 38, 44, 45, 46, 2];
+
   const [start, setStart] = useState(0);
   const [mouseDown, setMouseDown] = useState(false)
   const [end, setEnd] = useState(3);
@@ -45,9 +54,19 @@ function App() {
   useEffect(() => {
     // if(width <= 1400){
       setReset(true)
-      setWalls([])
       setStart(0)
       setEnd(3)
+
+      if(width > 1400){
+        setWalls(initialWallsLg)
+        setEnd(206)
+        setStart(200)
+      }
+      if(width <= 1400){
+        setWalls(initialWallsSm)
+        setEnd(15)
+        setStart(50)
+      }
     // }
   }, [width])
 

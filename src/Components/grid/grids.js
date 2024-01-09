@@ -112,6 +112,8 @@ export default function Grids({ rows, columns, g, walls, setWalls, setStart, set
         return (<div data-coordinates={`(${x},${y})`} key={`${x},${y}`}
             onClick={(e) => handleClick(e, i)}
             onMouseDown={(e) => handleOnMouseDown(e, i)}
+            onTouchStart={(e) => handleOnMouseDown(e, i)}
+           
             onDrop={(e) => handleOnDrop(e, i)}
             onDragOver={handleDragOver}
         
@@ -120,7 +122,9 @@ export default function Grids({ rows, columns, g, walls, setWalls, setStart, set
             hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 
             text-center min-w-7 min-h-6`}
             onMouseEnter={(e) => handleOnMouseEnter(e,i)}
+            onTouchMove={(e) => handleOnMouseEnter(e,i)}
             onMouseUp={() => setMouseDown(false)}
+            onTouchEnd={() => setMouseDown(false)}
             // onMouseOver={(e) => handleOnMouseEnter(e,i)}
             // onMouseLeave={(e) => handleOnMouseEnter(e,i)}
             

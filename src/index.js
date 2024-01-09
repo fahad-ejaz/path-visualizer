@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import './index.css';
 import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router basename>
+  <Router>
      <Routes>
-        <Route path='*'
-         element={<React.StrictMode>
-                      <App />
-                  </React.StrictMode>
-                  }/>
+        <Route path='/'
+         element={ <App />}/>
      </Routes>
   </Router>
 );
