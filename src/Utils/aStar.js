@@ -97,7 +97,7 @@ const shortestDistanceNode = (distances, visited, heuristics) => {
 export default async function ({graph, start, end, setVisited, arr, startNode, endNode, columns}){
 
     let heuristics = getHeuristics({endNode, columns, g:graph})
-    console.log(heuristics)
+
 	// establish object for recording distances from the start node
 
 	let distances = {};
@@ -107,7 +107,6 @@ export default async function ({graph, start, end, setVisited, arr, startNode, e
     
 	distances = Object.assign(distances, graph[start]);
 	// distances = Object.assign(distances);
-    console.log(distances)
 
 	// track paths
 	let parents = { end: null };
@@ -180,9 +179,7 @@ function getHeuristics({startNode, endNode, columns, g}){
     // N1: 10.}
     let keys = Object.keys(g);
     let xEnd = endNode % columns;
-    console.log("xEnd", xEnd)
     let yEnd = Math.floor(endNode / columns);
-    console.log("yEnd", yEnd)
     let x = -1;
     let y = 0;
     let heuristics = {};

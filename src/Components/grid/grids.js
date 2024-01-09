@@ -14,7 +14,6 @@ export default function Grids({ rows, columns, g, walls, setWalls, setStart, set
         // console.log('onClick')
         // 
         const dataType = e.target.id;
-        console.log(dataType)
         if (dataType !== 'start' && dataType !== 'end') {
             e.preventDefault();
             setMouseDown(true);
@@ -36,7 +35,6 @@ export default function Grids({ rows, columns, g, walls, setWalls, setStart, set
             })
         }
     }
-
     const handleOnMouseEnter = (e, i) => {
         const dataType = e.target.id
         if (dataType !== 'start' && dataType !== 'end') {

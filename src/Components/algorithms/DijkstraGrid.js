@@ -20,14 +20,11 @@ export default function DijkstraGrid({walls, setWalls, rows, columns, arr, g, se
             let abc = null;
             abc = Dijkstra({ graph: g.AdjList, startNode: 'start', endNode: 'end', setVisited: setVisited,
                             setBeingExplored});
-            console.log(abc !== null)
             if (abc !== null){
-                console.log('promise', {...abc})
                 resolve(abc)
             }
         })
         let abc = await myPromise;
-        console.log('abc',abc)
         setPath({...abc})
         setFindPath(false)
     }
